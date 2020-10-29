@@ -5,18 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import pageObjects.googleHomePage;
+import pageObjects.herokuHomePage;
 import utilities.propertiesConfig;
 
-public class testRuns {
-
+public class herokuTestRuns {
     WebDriver driver;
     WebDriverWait wait;
-    googleHomePage googlehomepage;
-
-    int timeOut = 10;
+    herokuHomePage herokuhomepage;
     propertiesConfig propertiesconfig;
+    int timeOut = 10;
 
     @BeforeClass
     public void beforeclass() {
@@ -24,16 +21,9 @@ public class testRuns {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, timeOut);
-        googlehomepage = new googleHomePage(driver);
+        herokuhomepage = new herokuHomePage(driver);
         propertiesconfig = new propertiesConfig();
-        driver.get(propertiesconfig.getProperty("googleUrl"));
+        driver.get(propertiesconfig.getProperty("herokuUrl"));
     }
 
-    @Test(priority = 1)
-    public void successfulTest() {
-
-        googlehomepage.fillSearchData(propertiesconfig.getProperty("validSearchInput"));
-        googlehomepage.selectSearchField();
-
-    }
 }
