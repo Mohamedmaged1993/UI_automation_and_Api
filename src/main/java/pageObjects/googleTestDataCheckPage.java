@@ -8,12 +8,12 @@ import utilities.objectRepo;
 
 import java.util.List;
 
-public class testDataCheckPage {
+public class googleTestDataCheckPage {
     WebDriver driver;
     WebDriverWait wait;
 
     //create constructor
-    public testDataCheckPage(WebDriver driver) {
+    public googleTestDataCheckPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(this.driver, 30);
     }

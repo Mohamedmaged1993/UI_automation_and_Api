@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pageObjects.googleHomePage;
-import pageObjects.testDataCheckPage;
+import pageObjects.googleTestDataCheckPage;
 import utilities.propertiesConfig;
 
 public class googleTestRuns {
@@ -15,7 +15,7 @@ public class googleTestRuns {
     WebDriver driver;
     WebDriverWait wait;
     googleHomePage googlehomepage;
-testDataCheckPage testdatacheckpage;
+googleTestDataCheckPage testdatacheckpage;
     int timeOut = 10;
     propertiesConfig propertiesconfig;
 
@@ -26,7 +26,7 @@ testDataCheckPage testdatacheckpage;
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, timeOut);
         googlehomepage = new googleHomePage(driver);
-        testdatacheckpage = new testDataCheckPage(driver);
+        testdatacheckpage = new googleTestDataCheckPage(driver);
         propertiesconfig = new propertiesConfig();
         driver.get(propertiesconfig.getProperty("googleUrl"));
     }
