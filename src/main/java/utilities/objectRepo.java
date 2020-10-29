@@ -15,4 +15,7 @@ public class objectRepo {
 
 //heroku element locators
     public static By fileUploadText = By.linkText("File Upload");
+    public static By chooseFileLink = By.xpath("// input[contains(@id,'file-upload')]");
+    public static By fileUploadBTN = By.xpath("// input[contains(@id,'file-submit')]");
+
 }
