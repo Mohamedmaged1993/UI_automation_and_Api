@@ -10,6 +10,8 @@ import pageObjects.googleHomePage;
 import pageObjects.googleTestDataCheckPage;
 import utilities.propertiesConfig;
 
+import java.io.IOException;
+
 public class googleTestRuns {
 
     WebDriver driver;
@@ -32,15 +34,13 @@ googleTestDataCheckPage testdatacheckpage;
     }
 
     @Test(priority = 1)
-    public void successfulTest() {
+    public void successfulTest() throws IOException {
 
         googlehomepage.fillSearchData(propertiesconfig.getProperty("validSearchInput"));
         googlehomepage.selectSearchField();
+        testdatacheckpage.getListOfSearchResults(2);
+        googlehomepage.screenCapture();
 
     }
-    @Test(priority = 2)
-    public void heroukoApp(){
 
-
-    }
 }

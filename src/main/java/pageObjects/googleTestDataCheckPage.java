@@ -19,10 +19,9 @@ public class googleTestDataCheckPage {
     }
 
     //create method to select second option
-    public void checkTextFields( ) {
-//        List<WebElement> li = driver.findElements(objectRepo.textSelection);
-  //      li.get(i);
-        //WebDriver pp = driver.findElements(By.className('LC20lb DKV0Md'));
-        //String value =  driver.findElements(By.tagName("h3");
+
+    public void getListOfSearchResults(int i ) {
+       List<WebElement> li = driver.findElements(objectRepo.textSelection);
+       li.get(i).click();;
     }
 }
